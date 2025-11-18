@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  backend:
+    build: .
+    container_name: bio-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.docker
+    restart: unless-stopped
